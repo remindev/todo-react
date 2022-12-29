@@ -1,18 +1,38 @@
 import "../css/home.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input } from "./input";
 import { List } from "./list";
 
 const Home = () => {
   // state for saving each todo's
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      id: "sampleTODO",
+      value: `Get started by adding todo task's !`,
+      completed: false,
+    },
+  ]);
+
+  useEffect((_) => {
+    if (!localStorage.getItem("todos"))
+      localStorage.setItem("todos", JSON.stringify(todos));
+    else setTodos(JSON.parse(localStorage.getItem("todos")));
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(
+    (_) => {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    },
+    [todos]
+  );
 
   // react dom element
   return (
     <>
       {/* headder */}
       <div className="head_top">
-        <h1>Todo app</h1>
+        <img src="/icon-192x192.png" alt="" /> <h1>Todo app</h1>
       </div>
 
       {/* titles */}

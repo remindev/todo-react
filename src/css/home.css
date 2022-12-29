@@ -1,18 +1,30 @@
-html{
+body,
+html {
   /* background: linear-gradient(to right, #fff4f4, #eceeff); */
-  height: 100vh;
+  height: min-content;
+}
+body {
+  max-width: 700px;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  /* background-color: rgb(255, 174, 174); */
 }
 .head_top {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.head_top img {
+  width: 35px;
 }
 .todo_content {
   width: 100%;
   box-sizing: border-box;
-  top: 150px;
   justify-content: center;
-  padding: 0 0 100px 0;
-  /* background-color: rgb(0, 0, 0); */
+  padding: 0 0 60px 0;
 }
 .todo_input {
   position: fixed;
@@ -20,6 +32,7 @@ html{
   grid-template-columns: auto max-content;
   align-items: center;
   width: calc(100% - 40px);
+  /* width: 100%; */
   gap: 15px;
   max-width: 700px;
   margin: auto;
@@ -48,30 +61,35 @@ html{
   cursor: pointer;
   outline: none;
 }
-.todo_the_todo.done{
-  background-color: rgb(214, 255, 216);
+.todo_the_todo.done {
+  background-color: rgb(68, 108, 219);
 }
-.todo_the_todo{
+.todo_the_todo.done p {
+  text-decoration: line-through;
+}
+.todo_the_todo {
+  color: white;
   margin-bottom: 10px;
   list-style: none;
   width: 100%;
   box-sizing: border-box;
   padding: 30px;
   border-radius: 5px;
-  background-color: rgb(230, 243, 255);
+  background-color: rgb(43, 148, 228);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.todo_the_todo .left{
+.todo_the_todo .left {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.todo_the_todo .left span{
+.todo_the_todo span,
+.todo_the_todo p {
   cursor: pointer;
 }
-.todo_the_todo .delete_btn{
+.todo_the_todo .delete_btn {
   cursor: pointer;
   padding: 5px;
   border-radius: 5px;
