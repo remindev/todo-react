@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Mono:wght@200;300;400;500;600;700&family=Varela+Round&display=swap");
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+
+  /* font-family: 'Poppins', sans-serif;
+     font-family: 'Roboto Mono', monospace; */
+  font-family: "Varela Round", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #222222; */
+  /* color:white; */
+  max-width: 700px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  /* background-image: url('https://w0.peakpx.com/wallpaper/220/854/HD-wallpaper-whatsapp-black-abstract-abstract-digital-abstraction-abstracts-background-digital-pattern-texture.jpg'); */
+  /* backdrop-filter: blur(5px); */
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
