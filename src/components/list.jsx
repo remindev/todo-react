@@ -25,7 +25,7 @@ export const List = ({ todos, setTodos }) => {
 
   return (
     <ul className="todo_content">
-      {todos.map((e, i) => {
+      {todos.map((e) => {
         return (
           <li
             className={`todo_the_todo ${e.completed ? "done" : ""}`}
